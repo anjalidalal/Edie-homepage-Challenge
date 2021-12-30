@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+  maximum-scale=5" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Devchallenges</title>
+  <style>
+    * {
+      margin: 0%;
+    }
+
+    body {
+      box-sizing: border-box;
+      font-family: "Poppins";
+    }
+
+    .main {
+      padding: 10px;
+      width: 350px;
+    }
+
+    .items {
+      display: none;
+    }
+
+    .item {
+      background-color: black;
+      width: 450px;
+      height: 300px;
+      color: white;
+      margin: 30px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      font-size: 24px;
+    }
+
+    .edie {
+      font-family: Heebo;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 23px;
+      color: #333333;
+    }
+
+    .nav {
+      display: flex;
+      flex-direction: column;
+      row-gap: 3px;
+    }
+
+    .nav>div {
+      width: 20px;
+      height: 4px;
+      background-color: black;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .img_upper_content {
+      margin: 40px 0px 20px 0px;
+    }
+
+    .img_upper_content>h1,
+    .img_lower_content>h1 {
+      width: 272px;
+      color: #333333;
+      font-size: 25px;
+      font-weight: 500;
+      padding-left: 30px;
+      line-height: 36px;
+    }
+
+    .img_lower_content>h1 {
+      width: 220px;
+      margin: 20px 0px;
+    }
+
+    .img_lower_content>p {
+      width: 295px;
+      padding-left: 30px;
+      font-size: 13px;
+      color: #4f4f4f;
+      line-height: 18px;
+    }
+
+    .img_upper_content>p {
+      width: 171px;
+      height: 18px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      color: #259ee4;
+      padding-left: 30px;
+    }
+
+    .one>img {
+      width: 350px;
+      height: 145px;
+      border-radius: 18px;
+    }
+
+    .tag {
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 15px;
+      color: #828282;
+    }
+
+    .form {
+      margin: 20px 0px;
+      padding-left: 30px;
+    }
+
+    input {
+      border: none;
+      background-color: #f2f2f2;
+      font-weight: 500;
+      font-size: 14px;
+      margin: 10px;
+      width: 150px;
+      height: 20px;
+      color: #bdbdbd;
+    }
+
+    .email {
+      width: 291px;
+      height: 47px;
+      background: #f2f2f2;
+      border-radius: 12px;
+    }
+
+    button {
+      width: 71px;
+      height: 39px;
+      background: #2d9cdb;
+      border-radius: 12px;
+      border: none;
+      color: white;
+      margin: 4px 0px;
+      margin-left: 36px;
+      margin-right: 4px;
+    }
+
+    .cart {
+      display: flex;
+      flex-direction: column;
+      gap: 70px;
+
+    }
+
+    .two>h1 {
+      width: 259px;
+      height: 72px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+      margin: 50px 0px;
+      color: #333333;
+    }
+
+    .icon1 {
+      width: 67px;
+      height: 67px;
+      background: #2D9CDB;
+      border-radius: 16px;
+      color: white;
+    }
+
+    .icon2 {
+      width: 67px;
+      height: 67px;
+      background: #27AE60;
+      border-radius: 16px;
+      color: white;
+    }
+
+    .icon3 {
+      width: 67px;
+      height: 67px;
+      background: #EB5757;
+      border-radius: 16px;
+      color: white;
+    }
+
+    .angleL {
+      font-size: 28px;
+      margin: 20px 0px;
+      margin-left: 22px;
+    }
+
+    .angleR {
+      font-size: 28px;
+      margin: 20px 0px;
+      margin-right: 20px;
+    }
+
+    .vector {
+      margin: 20px 22px;
+      font-size: 28px;
+    }
+
+    .content>h1 {
+      width: 160px;
+      height: 36px;
+      font-weight: bold;
+      font-size: 24px;
+      color: #333333;
+      margin: 20px 0px;
+    }
+
+    .content>p {
+      width: 273px;
+      height: 96px;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 24px;
+      color: #4F4F4F;
+      /* margin: 10px 0px; */
+    }
+
+    .uiux,
+    .front,
+    .backend {
+      padding-left: 30px;
+      width: 300px;
+      height: 422px;
+      background: #FFFFFF;
+      box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+      border-radius: 24px;
+    }
+
+    .btn1 {
+      width: 116px;
+      height: 38px;
+      background: #E0E0E0;
+      border-radius: 12px;
+      font-size: 16px;
+      padding-top: 11px;
+      color: #828282;
+      text-align: center;
+      margin: 20px 0px;
+    }
+
+    .btn2 {
+      width: 116px;
+      height: 38px;
+      background: #2D9CDB;
+      border-radius: 12px;
+      text-align: center;
+      font-size: 16px;
+      color: #FFFFFF;
+      margin: 20px 0px;
+      padding-top: 11px;
+    }
+
+    .btn3 {
+      width: 116px;
+      height: 38px;
+      background-color: #E0E0E0;
+      border-radius: 12px;
+      color: #828282;
+      padding-top: 11px;
+      font-size: 16px;
+      text-align: center;
+      margin: 20px 0px;
+    }
+
+    .three>h1 {
+      width: 267px;
+      height: 72px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+      color: #333333;
+      margin: 50px 0px;
+    }
+
+    .image1>img,
+    .image2>img,
+    .image3>img,
+    .image4>img {
+      width: 350px;
+      height: 350px;
+      border-radius: 18px;
+    }
+
+    .image1,
+    .image2,
+    .image3,
+    .image4 {
+      margin: 40px 0px;
+    }
+
+    .image1>p,
+    .image2>p,
+    .image3>p,
+    .image4>p {
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 18px;
+      color: #828282;
+
+    }
+
+    .image1>h1,
+    .image2>h1,
+    .image3>h1,
+    .image4>h1 {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+      color: #333333;
+    }
+
+    .three>p {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 27px;
+      color: #2D9CDB;
+    }
+
+    span {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+      color: #EB5757;
+    }
+
+    .four {
+      margin: 60px 0px;
+    }
+
+    .left>h1 {
+      width: 280px;
+      height: 162px;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 54px;
+      color: #333333;
+      margin: 10px 0px;
+    }
+
+    .left>p {
+      width: 273px;
+      height: 48px;
+      font-size: 16px;
+      line-height: 24px;
+      color: #4F4F4F;
+    }
+
+    .person1>img {
+      width: 162.25px;
+      height: 167.03px;
+      border-radius: 24px;
+
+    }
+
+    .person1 {
+      margin-top: 70px;
+    }
+
+    .person3 {
+      margin-top: 5px;
+    }
+
+    .person2>img {
+      width: 144.76px;
+      height: 144.76px;
+      border-radius: 24px;
+    }
+
+    .person3>img {
+      width: 162.25px;
+      height: 167.03px;
+      border-radius: 24px;
+    }
+
+    .right {
+      display: flex;
+      margin-top: 40px;
+      gap: 12px;
+    }
+
+    .five>p {
+      width: 351px;
+      height: 180px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+      color: #333333;
+    }
+
+    .carlos {
+      display: flex;
+      margin: 20px 0px;
+      gap: 20px;
+    }
+    .five{
+      margin: 100px 0px;
+    }
+    .carlos-image>img {
+      width: 100px;
+      height: 90px;
+      border-radius: 12px;
+    }
+
+    .info>h1 {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 49px;
+      color: #333333;
+
+    }
+
+    .info>p {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 40px;
+      color: #828282;
+
+    }
+
+    .six {
+      width: 290px;
+      height: 500px;
+      background: #100E1D;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 30px;
+      color: white;
+    }
+
+    .list>p {
+      font-size: 18px;
+      line-height: 200%;
+      color: #FFFFFF;
+    }
+
+    .accounts {
+      display: flex;
+      gap: 10px;
+    }
+
+    .emails {
+      width: 290px;
+      height: 50px;
+      background: #f2f2f2;
+      border-radius: 12px;
+      margin: 10px 0px;
+    }
+
+    .button {
+      width: 70px;
+      height: 42px;
+      background: #2d9cdb;
+      border-radius: 12px;
+      border: none;
+      color: white;
+      margin: 4px 0px;
+      margin-left: 37px;
+      margin-right: 4px;
+    }
+
+    .labels {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      color: #828282;
+    }
+
+    /* for laptop screen */
+    @media (min-width: 768px) {
+      .main {
+        width: 1332px;
+        margin: auto;
+      }
+
+      .items {
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 36px;
+        color: #333333;
+        display: flex;
+        gap: 44px;
+        padding: 10px;
+      }
+
+      .edie {
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 53px;
+        color: #333333;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .one>img {
+        width: 1332px;
+        height: 354px;
+        border-radius: 18px;
+      }
+
+      .img_upper_content>h1,
+      .img_lower_content>h1 {
+        width: 543px;
+        height: 144px;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 72px;
+        padding: 0px 250px;
+        color: #333333;
+      }
+
+      .img_upper_content>p {
+        width: 290px;
+        height: 27px;
+        font-weight: 500;
+        font-size: 20px;
+        color: #2d9cdb;
+        padding: 0px 250px;
+      }
+
+      .img_lower_content>p {
+        width: 366px;
+        height: 137px;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+        color: #4f4f4f;
+        padding: 0px 250px;
+      }
+
+      .email {
+        width: 350px;
+        height: 57px;
+        background: #f2f2f2;
+        border-radius: 12px;
+        margin: 10px 0px;
+        margin-left: 215px;
+      }
+
+      button {
+        width: 94px;
+        height: 49px;
+        background: #2d9cdb;
+        border-radius: 12px;
+        border: none;
+        color: white;
+        margin: 4px 0px;
+        margin-left: 73px;
+        margin-right: 4px;
+      }
+
+      .tag {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        margin-left: 220px;
+        color: #828282;
+      }
+
+      .two>h1 {
+        width: 350px;
+        height: 108px;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 54px;
+        padding-left: 120px;
+        color: #333333;
+      }
+
+      .three {
+        padding-left: 120px;
+      }
+
+      .three>h1 {
+        width: 450px;
+        height: 108px;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 54px;
+        color: #333333;
+        margin: 50px 0px;
+      }
+
+      .cart {
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+        padding-left: 120px;
+      }
+
+      .upper {
+        display: flex;
+        gap: 20px;
+      }
+
+      .lower {
+        display: flex;
+        gap: 20px;
+      }
+
+      .image1>img,
+      .image2>img,
+      .image3>img,
+      .image4>img {
+        width: 540px;
+        height: 540px;
+        border-radius: 18px;
+      }
+
+      .image1 {
+        margin-top: 170px;
+      }
+
+      .image3 {
+        margin-top: 90px;
+      }
+
+      .image4 {
+        margin-top: -3%;
+      }
+
+      .image1>p,
+      .image2>p,
+      .image3>p,
+      .image4>p {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 21px;
+        color: #828282;
+      }
+
+      .image1>h1,
+      .image2>h1,
+      .image3>h1,
+      .image4>h1 {
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 36px;
+        color: #333333;
+      }
+
+      .three>p {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 27px;
+        color: #2D9CDB;
+        text-align: right;
+        align-items: flex-end;
+        padding-right: 110px;
+        margin-top: -6%;
+      }
+
+      .four {
+        display: flex;
+        width: 1103.43px;
+        height: 584px;
+        justify-content: space-between;
+        padding-left: 120px;
+        margin: 120px 0px;
+      }
+
+      .person1>img {
+        width: 291px;
+        height: 300px;
+        border-radius: 24px;
+      }
+
+      .right {
+        gap: 20px;
+      }
+
+      .person1 {
+        margin-top: 100px;
+      }
+
+      .person3 {
+        margin-top: 13px;
+      }
+
+      .person2>img {
+        width: 260px;
+        height: 260px;
+        border-radius: 24px;
+      }
+
+      .person3>img {
+        width: 288px;
+        height: 270px;
+        border-radius: 24px;
+      }
+
+      .left>h1 {
+        width: 300px;
+        height: 170px;
+        font-weight: 500;
+        font-size: 38px;
+        line-height: 56px;
+        color: #333333;
+        margin: 10px 0px;
+      }
+
+      .left {
+        margin-top: 145px;
+      }
+
+      .left>p {
+        width: 285px;
+        height: 48px;
+        font-size: 20px;
+        line-height: 29px;
+        color: #4F4F4F;
+      }
+
+      .five>p {
+        width: 940px;
+        height: 180px;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 54px;
+        color: #333333;
+      }
+
+      .five {
+        padding-left: 120px;
+        margin: 120px 0px;
+      }
+
+      .six {
+        width: 1250px;
+        height: 250px;
+        background: #100E1D;
+        margin: 0px;
+        padding: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .emails {
+        width: 350px;
+        height: 57px;
+        background: #f2f2f2;
+        border-radius: 12px;
+        margin: 10px 0px;
+      }
+
+      .list>p {
+        font-size: 22px;
+      }
+
+      .button {
+        width: 94px;
+        height: 49px;
+        background: #2d9cdb;
+        border-radius: 12px;
+        border: none;
+        color: white;
+        margin: 4px 0px;
+        margin-left: 73px;
+        margin-right: 4px;
+      }
+
+      .labels {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        color: white;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <!-- first section of header and navbar -->
+    <div class="header">
+      <div class="edie">Edie</div>
+      <div class="items">
+        <div class="home">Home</div>
+        <div class="service">Services</div>
+        <div class="work">Our Works</div>
+        <div class="client">Clients</div>
+        <div class="contact">Contact</div>
+      </div>
+      <div class="nav" onclick="open_items()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- first section -->
+    <div class="one">
+      <div class="img_upper_content">
+        <p>Unhappy with your website?</p>
+        <h1>We create beautiful and fast web services</h1>
+      </div>
+      <img src="./heroImage.jpg" alt="" />
+      <div class="img_lower_content">
+        <h1>Story, emotion and purpose</h1>
+        <p>
+          We help transform your ideas into real world applications that will
+          outperform your toughest competition and help you achieve your
+          strategic goals in short period of time.
+        </p>
+      </div>
+      <div class="form">
+        <label class="tag">Want us to contact you?</label>
+        <br />
+        <div class="email">
+          <input type="text" placeholder="Email" />
+          <button>Join</button>
+        </div>
+      </div>
+    </div>
+    <!-- second section of icons -->
+    <div class="two">
+      <h1>We offer high demand services </h1>
+      <div class="cart">
+        <div class="uiux">
+          <div class="icon1">
+            <i class="fa fa-pencil vector"></i>
+          </div>
+          <div class="content">
+            <h1>UI/UX Design</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis
+              turpis.</p>
+          </div>
+          <div class="btn1">Get started</div>
+        </div>
+        <div class="front">
+          <div class="icon2">
+            <i class="fa fa-angle-left angleL"></i>
+            <i class="fa fa-angle-right angleR"></i>
+          </div>
+          <div class="content">
+            <h1>Front End</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis
+              turpis.</p>
+          </div>
+          <div class="btn2">Get started</div>
+        </div>
+        <div class="backend">
+          <div class="icon3">
+            <i class="fa fa-bars vector"></i>
+          </div>
+          <div class="content">
+            <h1>Back End</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id
+              quisturpis.</p>
+          </div>
+          <div class="btn3">Get started</div>
+        </div>
+      </div>
+    </div>
+    <!-- third section -->
+    <div class="three">
+      <h1>Good design means good business</h1>
+      <div class="upper">
+        <div class="image1">
+          <img src="./smarthome.jpg" alt="">
+          <p>Full stack application</p>
+          <h1>Smart home dashboard</h1>
+        </div>
+        <div class="image2">
+          <img src="./onboard.png" alt="">
+          <p>UI/UX design</p>
+          <h1>Onboard application</h1>
+        </div>
+      </div>
+      <div class="lower">
+        <div class="image3">
+          <img src="./booking.png" alt="">
+          <p>Mobile application</p>
+          <h1>Booking system</h1>
+        </div>
+        <div class="image4">
+          <img src="./juice-product.png" alt="">
+          <p>Front End application</p>
+          <h1>Juice product homepage</h1>
+        </div>
+      </div>
+      <p>See more ~</p>
+    </div>
+    <!-- fourth section -->
+    <div class="four">
+      <!-- one -->
+      <div class="left">
+        <span>Meet the team</span>
+        <h1>We are chilled and a laidback team
+        </h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <!-- two -->
+      <div class="right">
+        <div class="person1">
+          <img src="./person3.png" alt="">
+        </div>
+        <div class="both">
+          <div class="person2">
+            <img src="./person1.png" alt="">
+          </div>
+          <div class="person3">
+            <img src="./person2.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fifth section -->
+    <div class="five">
+      <p>“Fast and outstanding resutls. Edie understands their customer's needs. They have a young and talented team.”
+      </p>
+      <div class="carlos">
+        <div class="carlos-image">
+          <img src="./person4.png" alt="">
+        </div>
+        <div class="info">
+          <h1>Carlos Tran</h1>
+          <p>The Decorate Gatsby</p>
+        </div>
+      </div>
+    </div>
+    <!-- sixth section -->
+    <div class="six">
+      <div class="list">
+        <p>Home</p>
+        <p>Services</p>
+        <p>Our Works</p>
+        <p>Clients</p>
+        <p>Contact</p>
+      </div>
+      <div class="connection">
+        <h1>Edie</h1>
+        <div class="accounts">
+          <div>
+            <a href="https://github.com/anjalidalal">
+              <img src="./instagram.svg" alt="">
+            </a>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/in/anjali-dalal-768b73205/">
+              <img src="./linkedin.svg" alt="">
+            </a>
+          </div>
+          <div>
+            <a href="https://twitter.com/AnjaliDalal15">
+              <img src="./twitter.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="last">
+        <label class="labels">Want us to contact you?
+        </label>
+        <br />
+        <div class="emails">
+          <input type="text" placeholder="Email" />
+          <button class="button">Join</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    let bar = document.querySelector(".items");
+    function open_items() {
+      bar.classList.toggle("item");
+    }
+  </script>
+</body>
+
+</html>
