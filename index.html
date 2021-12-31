@@ -18,6 +18,10 @@
       font-family: "Poppins";
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     .main {
       padding: 10px;
       width: 350px;
@@ -28,12 +32,15 @@
     }
 
     .item {
-      background-color: black;
-      width: 450px;
-      height: 300px;
-      color: white;
-      margin: 30px;
-
+      background-color: rgba(255, 255, 255, 0.925);
+      width: 350px;
+      height: 380px;
+      color: black;
+      margin: 20px;
+      z-index: 1;
+      position: absolute;
+      top: 30px;
+      left: -10px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -41,7 +48,9 @@
       gap: 24px;
       font-size: 24px;
     }
-
+    .one{
+      position: relative;
+    }
     .edie {
       font-family: Heebo;
       font-style: normal;
@@ -107,6 +116,7 @@
     .one>img {
       width: 350px;
       height: 145px;
+      object-fit: cover;
       border-radius: 18px;
     }
 
@@ -131,6 +141,10 @@
       width: 150px;
       height: 20px;
       color: #bdbdbd;
+    }
+
+    input:focus {
+      outline: none;
     }
 
     .email {
@@ -406,9 +420,11 @@
       margin: 20px 0px;
       gap: 20px;
     }
-    .five{
+
+    .five {
       margin: 100px 0px;
     }
+
     .carlos-image>img {
       width: 100px;
       height: 90px;
@@ -478,6 +494,18 @@
       font-size: 14px;
       line-height: 21px;
       color: #828282;
+    }
+
+    a {
+      color: black;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: grey;
     }
 
     /* for laptop screen */
@@ -747,7 +775,7 @@
       }
 
       .six {
-        width: 1250px;
+        width: 1600px;
         height: 250px;
         background: #100E1D;
         margin: 0px;
@@ -787,6 +815,18 @@
         line-height: 21px;
         color: white;
       }
+
+      a {
+        color: black;
+      }
+
+      a:link {
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: rgb(24, 122, 202);
+      }
     }
   </style>
 </head>
@@ -797,11 +837,21 @@
     <div class="header">
       <div class="edie">Edie</div>
       <div class="items">
-        <div class="home">Home</div>
-        <div class="service">Services</div>
-        <div class="work">Our Works</div>
-        <div class="client">Clients</div>
-        <div class="contact">Contact</div>
+        <div class="home">
+          <a href="#one">Home</a>
+        </div>
+        <div class="service">
+          <a href="#two"> Services</a>
+        </div>
+        <div class="work">
+          <a href="#three">Our Works</a>
+        </div>
+        <div class="client">
+          <a href="#four">Clients</a>
+        </div>
+        <div class="contact">
+          <a href="#six"> Contact</a>
+        </div>
       </div>
       <div class="nav" onclick="open_items()">
         <div></div>
@@ -810,7 +860,7 @@
       </div>
     </div>
     <!-- first section -->
-    <div class="one">
+    <div class="one" id="one">
       <div class="img_upper_content">
         <p>Unhappy with your website?</p>
         <h1>We create beautiful and fast web services</h1>
@@ -834,7 +884,7 @@
       </div>
     </div>
     <!-- second section of icons -->
-    <div class="two">
+    <div class="two" id="two">
       <h1>We offer high demand services </h1>
       <div class="cart">
         <div class="uiux">
@@ -874,7 +924,7 @@
       </div>
     </div>
     <!-- third section -->
-    <div class="three">
+    <div class="three" id="three">
       <h1>Good design means good business</h1>
       <div class="upper">
         <div class="image1">
@@ -903,7 +953,7 @@
       <p>See more ~</p>
     </div>
     <!-- fourth section -->
-    <div class="four">
+    <div class="four" id="four">
       <!-- one -->
       <div class="left">
         <span>Meet the team</span>
@@ -940,43 +990,43 @@
         </div>
       </div>
     </div>
-    <!-- sixth section -->
-    <div class="six">
-      <div class="list">
-        <p>Home</p>
-        <p>Services</p>
-        <p>Our Works</p>
-        <p>Clients</p>
-        <p>Contact</p>
-      </div>
-      <div class="connection">
-        <h1>Edie</h1>
-        <div class="accounts">
-          <div>
-            <a href="https://github.com/anjalidalal">
-              <img src="./instagram.svg" alt="">
-            </a>
-          </div>
-          <div>
-            <a href="https://www.linkedin.com/in/anjali-dalal-768b73205/">
-              <img src="./linkedin.svg" alt="">
-            </a>
-          </div>
-          <div>
-            <a href="https://twitter.com/AnjaliDalal15">
-              <img src="./twitter.svg" alt="">
-            </a>
-          </div>
+  </div>
+  <!-- sixth section -->
+  <div class="six" id="six">
+    <div class="list">
+      <p>Home</p>
+      <p>Services</p>
+      <p>Our Works</p>
+      <p>Clients</p>
+      <p>Contact</p>
+    </div>
+    <div class="connection">
+      <h1>Edie</h1>
+      <div class="accounts">
+        <div>
+          <a href="https://github.com/anjalidalal" target="blank">
+            <img src="./instagram.svg" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/anjali-dalal-768b73205/" target="blank">
+            <img src="./linkedin.svg" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="https://twitter.com/AnjaliDalal15" target="blank">
+            <img src="./twitter.svg" alt="">
+          </a>
         </div>
       </div>
-      <div class="last">
-        <label class="labels">Want us to contact you?
-        </label>
-        <br />
-        <div class="emails">
-          <input type="text" placeholder="Email" />
-          <button class="button">Join</button>
-        </div>
+    </div>
+    <div class="last">
+      <label class="labels">Want us to contact you?
+      </label>
+      <br />
+      <div class="emails">
+        <input type="text" placeholder="Email" />
+        <button class="button">Join</button>
       </div>
     </div>
   </div>
